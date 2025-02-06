@@ -1,10 +1,24 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import App from './App.tsx'
+
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+
+import MealsCalculator from './views/meals-calculator/index.tsx'
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <MealsCalculator />
+  },
+  {
+    path: '/meals-calculator',
+    element: <MealsCalculator />
+  }
+])
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </StrictMode>,
 )
