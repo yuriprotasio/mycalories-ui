@@ -120,8 +120,8 @@ const foods = () => {
       carbohydrate: 8.5,
       proteins: 0.35,
       fat: 2.65,
-      quantity: 25,
-      measure: 'g'
+      quantity: 1,
+      measure: 'un'
     },
     {
       name: 'Lasanha Bolonhesa Sadia',
