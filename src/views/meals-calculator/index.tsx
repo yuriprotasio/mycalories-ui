@@ -84,7 +84,7 @@ function MealsCalculator() {
 
   function _onChangeCustom (event, index) {
     const name = event.target.name
-    const value = event.target.value
+    const value = Number(event.target.value)
     const newMealsList = [...mealsList]
     newMealsList[index].form = { ...newMealsList[index].form, [name]: value }
     setMealsList(newMealsList)
@@ -151,7 +151,6 @@ function MealsCalculator() {
                           onChange={(selected) => _onChangeMeal(selected, index)}
                           options={_getMealsOptions(foodsList)}
                         />
-                        <button className="rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2 mt-[20px] md:mt-[0px]" onClick={() => _addFood(index)}>Adicionar Comida</button>
                       </div>
                       <div className="md:hidden inline-block w-[100%] md:w-[50%] md:mb-[20px]">
                         {meal.selectedValue && <div className="border-1 border-indigo-500 rounded-sm mt-[10px]">
@@ -180,6 +179,7 @@ function MealsCalculator() {
                             Carboidratos: {meal.form.carbohydrate} | 
                             Gordura: {meal.form.fat}
                           </div>
+                          <button className="rounded-md bg-green-500 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-green-500 focus:shadow-none active:bg-green-700 hover:bg-green-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2 mt-[20px] md:mt-[0px]" onClick={() => _addFood(index)}>Adicionar Comida</button>
                         </div>}
                       </div>
                       <div className="border rounded-sm p-[2px] text-sm">
@@ -241,6 +241,7 @@ function MealsCalculator() {
                           Carboidratos: {meal.form.carbohydrate} | 
                           Gordura: {meal.form.fat}
                         </div>
+                        <button className="rounded-md bg-green-500 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-green-500 focus:shadow-none active:bg-green-700 hover:bg-green-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2 mt-[20px] md:mt-[0px]" onClick={() => _addFood(index)}>Adicionar Comida</button>
                       </div>}
                     </div>
                     {/* <hr className="my-[10px]"></hr> */}
