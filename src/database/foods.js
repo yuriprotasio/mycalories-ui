@@ -116,11 +116,11 @@ const foods = () => {
     {
       name: 'Pão de queijo tradicional duduxo',
       description: 'Pão de queijo tradicional duduxo',
-      calories: 105,
-      carbohydrate: 17,
-      proteins: 0.7,
-      fat: 5.3,
-      quantity: 50,
+      calories: 52.5,
+      carbohydrate: 8.5,
+      proteins: 0.35,
+      fat: 2.65,
+      quantity: 25,
       measure: 'g'
     },
     {
