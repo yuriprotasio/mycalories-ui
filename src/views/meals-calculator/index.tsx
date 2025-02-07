@@ -117,7 +117,7 @@ function MealsCalculator() {
               Peso Atual: {userInfo.bodyWeight}<br></br>
               Metas: <br></br>
               <div className="w-full">
-                <div className="w-[50%] inline-block">Calorias: 2000</div>
+                <div className="w-[50%] inline-block">Calorias: {userInfo.caloriesGoal}</div>
                 <div className="w-[50%] inline-block">Proteinas: {userInfo.bodyWeight * userInfo.proteinGoal}</div>
                 <div className="w-[50%] inline-block">Carboidratos: {userInfo.bodyWeight * userInfo.carbohydrateGoal}</div>
                 <div className="w-[50%] inline-block">Gordura: {userInfo.bodyWeight * userInfo.fatGoal}</div>

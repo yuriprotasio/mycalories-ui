@@ -1,6 +1,7 @@
 const user = () => {
   return {
-    bodyWeight: 79,
+    caloriesGoal: 1600,
+    bodyWeight: 77,
     proteinGoal: 1.6,
     carbohydrateGoal: 1,
     fatGoal: 1

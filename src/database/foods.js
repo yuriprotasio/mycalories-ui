@@ -22,11 +22,11 @@ const foods = () => {
     },
     {
       name: 'Pão de forma, presunto, queijo, maionese',
-      description: '2 Fatias de pão de forma, 15g de presunto, 15g de queijo, 10g de maionese',
-      calories: 225.91,
-      carbohydrate: 25.12,
-      proteins: 9.04,
-      fat: 9.29,
+      description: '2 Fatias de pão de forma, 20g de presunto, 20g de queijo, 12g de maionese',
+      calories: 247.4,
+      carbohydrate: 25.46,
+      proteins: 11.62,
+      fat: 10.92,
       quantity: 1,
       measure: 'un'
     },
@@ -321,6 +321,36 @@ const foods = () => {
       proteins: 1.20,
       fat: 12,
       quantity: 100,
+      measure: 'g'
+    },
+    {
+      name: 'Yo Pro Cappuccino',
+      description: 'Yo Pro Cappuccino',
+      calories: 159,
+      carbohydrate: 20,
+      proteins: 15,
+      fat: 2,
+      quantity: 250,
+      measure: 'ml'
+    },
+    {
+      name: 'Pure de batata',
+      description: 'Pure de batata',
+      calories: 88,
+      carbohydrate: 15,
+      proteins: 1.7,
+      fat: 2.8,
+      quantity: 100,
+      measure: 'g'
+    },
+    {
+      name: 'Palmito',
+      description: 'Palmito comprido',
+      calories: 11,
+      carbohydrate: 1.5,
+      proteins: 0.8,
+      fat: 0,
+      quantity: 50,
       measure: 'g'
     },
     {
