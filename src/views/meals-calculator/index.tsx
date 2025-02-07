@@ -40,6 +40,9 @@ function MealsCalculator() {
   function _addFood (index) {
     const newMealsList = [...mealsList]
     if (!newMealsList[index].selectedValue?.name) return
+    if (!newMealsList[index].form?.quantity && newMealsList[index].selectedValue?.name !== 'Personalizado') {
+      newMealsList[index].form = {}
+    }
     const newFood = { ...newMealsList[index].selectedValue, ...newMealsList[index].form}
     newMealsList[index].items.push(newFood)
     newMealsList[index].selectedValue = null
