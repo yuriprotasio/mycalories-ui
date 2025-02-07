@@ -33,7 +33,7 @@ const foods = () => {
     {
       name: 'Arroz, feijão, peito de frango',
       description: '50g de arroz, 100g de feijão, 400g de peito de frango',
-      calories: 935,
+      calories: 695,
       carbohydrate: 28,
       proteins: 117.845,
       fat: 6.23,
