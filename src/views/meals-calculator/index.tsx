@@ -4,17 +4,10 @@ import { user } from '../../database/user'
 import Select from 'react-select'
 import { TrashIcon } from '@heroicons/react/24/solid'
 
-function FoodItem ({ food }) {
-	return <>
-		{food.name} | ({food.description})<br></br>
-		{food.calories} | {food.carbohydrate} | {food.proteins} | {food.fat} | {food.quantity} | {food.measure}
-	</>
-}
-
 function MealsCalculator() {
 	const [userInfo] = useState(user())
 	const [foodsList] = useState(foods())
-	const [mealsList, setMealsList] = useState([])
+	const [mealsList, setMealsList] = useState(JSON.parse(localStorage.getItem("newMealsList")) || [])
 	const [totals, setTotals] = useState({ calories: 0, proteins: 0, carbohydrate: 0, fat: 0 })
 
   const [dateSelected, setDateSelected] = useState((new Date()).toJSON().slice(0,10))
@@ -30,11 +23,13 @@ function MealsCalculator() {
     newMealsList[index].selectedValue = selected
     newMealsList[index].form = {}
     setMealsList(newMealsList)
+    localStorage.setItem("newMealsList", JSON.stringify(newMealsList))
 	}
 
 	function _addMeal () {
 		const newMealsList = [...mealsList, { items: [] }]
 		setMealsList(newMealsList)
+    localStorage.setItem("newMealsList", JSON.stringify(newMealsList))
 	}
 
   function _addFood (index) {
@@ -50,6 +45,7 @@ function MealsCalculator() {
     setMealsList(newMealsList)
     clearSelect(index)
     _calculateTotals(newMealsList)
+    localStorage.setItem("newMealsList", JSON.stringify(newMealsList))
   }
 
   function _calculateTotals (list) {
@@ -83,6 +79,7 @@ function MealsCalculator() {
     const newMealsList = [...mealsList]
     newMealsList[index].form = { ...newMealsList[index].form, quantity, calories, carbohydrate, proteins, fat }
     setMealsList(newMealsList)
+    localStorage.setItem("newMealsList", JSON.stringify(newMealsList))
 	}
 
   function _onChangeCustom (event, index) {
@@ -91,6 +88,7 @@ function MealsCalculator() {
     const newMealsList = [...mealsList]
     newMealsList[index].form = { ...newMealsList[index].form, [name]: value }
     setMealsList(newMealsList)
+    localStorage.setItem("newMealsList", JSON.stringify(newMealsList))
   }
 
   function _onChangeDate (elem) {
@@ -102,7 +100,15 @@ function MealsCalculator() {
     newMealsList[mealIndex].items.splice(foodIndex, 1)
     setMealsList(newMealsList)
     _calculateTotals(newMealsList)
+    localStorage.setItem("newMealsList", JSON.stringify(newMealsList))
   }
+
+  function _clearAll () {
+    setMealsList([])
+    setTotals({})
+    localStorage.clear()
+  }
+
 // py-32 sm:py-48 lg:py-56
   return (
     <div className="relative isolate px-0 md:px-6 pt-2">
@@ -128,10 +134,10 @@ function MealsCalculator() {
               <div className="border">
                 Total hoje:<br></br>
                 <div className="w-full">
-                  <div className="w-[50%] inline-block">Calorias: {totals.calories.toFixed(2)} </div>
-                  <div className="w-[50%] inline-block">Proteínas: {totals.proteins.toFixed(2)}</div>
-                  <div className="w-[50%] inline-block">Carboidratos: {totals.carbohydrate.toFixed(2)}</div>
-                  <div className="w-[50%] inline-block">Gordura: {totals.fat.toFixed(2)}</div>
+                  <div className="w-[50%] inline-block">Calorias: {totals.calories?.toFixed(2)} </div>
+                  <div className="w-[50%] inline-block">Proteínas: {totals.proteins?.toFixed(2)}</div>
+                  <div className="w-[50%] inline-block">Carboidratos: {totals.carbohydrate?.toFixed(2)}</div>
+                  <div className="w-[50%] inline-block">Gordura: {totals.fat?.toFixed(2)}</div>
                 </div>
               </div>
             </div>
@@ -252,6 +258,12 @@ function MealsCalculator() {
                 ))}	
               </div>
               <button className="rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2 mt-[30px] mb-[30px]" onClick={_addMeal}>Adicionar Refeição</button>
+              <br></br>
+              <br></br>
+              <br></br>
+              <br></br>
+              <br></br>
+              <button className="rounded-md bg-red-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-red-700 focus:shadow-none active:bg-red-700 hover:bg-red-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2 mt-[30px] mb-[30px]" onClick={_clearAll}>Limpar tudo</button>
             </div>
           </div>
         </div>
