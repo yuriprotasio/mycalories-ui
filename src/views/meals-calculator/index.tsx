@@ -209,10 +209,10 @@ function MealsCalculator() {
                                 <td className="border">{item.name}</td>
                                 <td className="border">{item.description}</td>
                                 <td className="border">{item.quantity} ({item.measure})</td>
-                                <td className="border">{item.calories}</td>
-                                <td className="border">{item.proteins}</td>
-                                <td className="border">{item.carbohydrate}</td>
-                                <td className="border">{item.fat}</td>
+                                <td className="border">{item.calories?.toFixed(2)}</td>
+                                <td className="border">{item.proteins?.toFixed(2)}</td>
+                                <td className="border">{item.carbohydrate?.toFixed(2)}</td>
+                                <td className="border">{item.fat?.toFixed(2)}</td>
                                 <td className="border"><TrashIcon className="cursor-pointer text-red-500" onClick={() => _onDeleteFood(index, foodIndex)} /></td>
                               </tr>
                             ))}
