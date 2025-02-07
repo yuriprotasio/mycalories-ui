@@ -12,6 +12,9 @@ function MealsCalculator() {
 
   const [dateSelected, setDateSelected] = useState((new Date()).toJSON().slice(0,10))
 
+  useEffect(() => {
+    _calculateTotals(mealsList)
+  }, [])
 
   const clearSelect = (index) => {
     const newMealsList = [...mealsList]
