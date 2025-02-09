@@ -126,10 +126,10 @@ const foods = () => {
     {
       name: 'Lasanha Bolonhesa Sadia',
       description: 'Lasanha Bolonhesa Sadia',
-      calories: 125,
-      carbohydrate: 10,
-      proteins: 8.6,
-      fat: 5.6,
+      calories: 115,
+      carbohydrate: 8,
+      proteins: 7.2,
+      fat: 6,
       quantity: 100,
       measure: 'g'
     },
