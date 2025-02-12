@@ -195,7 +195,7 @@ function MealsCalculator() {
                         </div>}
                       </div>
                       <div className="border rounded-sm p-[2px] text-[9px] overflow-x-auto">
-                        <table>
+                        <table className="w-[100%]">
                           <tr className="border">
                             <th className="border">Nome</th>
                             <th className="border">Descrição</th>
