@@ -194,7 +194,7 @@ function MealsCalculator() {
                           <button className="rounded-md bg-green-500 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-green-500 focus:shadow-none active:bg-green-700 hover:bg-green-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2 mt-[20px] md:mt-[0px]" onClick={() => _addFood(index)}>Adicionar Comida</button>
                         </div>}
                       </div>
-                      <div className="border rounded-sm p-[2px] text-sm">
+                      <div className="border rounded-sm p-[2px] text-sm overflow-x-auto">
                         <table>
                           <tr className="border">
                             <th className="border">Nome</th>
