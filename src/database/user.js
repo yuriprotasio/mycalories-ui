@@ -1,8 +1,8 @@
 const user = () => {
   return {
-    caloriesGoal: 1600,
+    caloriesGoal: 1800,
     bodyWeight: 77,
-    proteinGoal: 1.6,
+    proteinGoal: 2,
     carbohydrateGoal: 1,
     fatGoal: 1
   }

@@ -354,6 +354,66 @@ const foods = () => {
       measure: 'g'
     },
     {
+      name: 'Whey Protein Morango Growth',
+      description: 'Whey Protein Morango Growth',
+      calories: 127,
+      carbohydrate: 4.2,
+      proteins: 23,
+      fat: 2,
+      quantity: 30,
+      measure: 'g'
+    },
+    {
+      name: 'Pre Treino Uva Growth',
+      description: 'Pre Treino Uva Growth 1 + 1/2 dosador',
+      calories: 27,
+      carbohydrate: 3.4,
+      proteins: 0,
+      fat: 0,
+      quantity: 10,
+      measure: 'g'
+    },
+    {
+      name: 'Rap10 Integral',
+      description: 'Rap10 Integral',
+      calories: 87.15,
+      carbohydrate: 14.85,
+      proteins: 2.56,
+      fat: 2.06,
+      quantity: 1,
+      measure: 'un'
+    },
+    {
+      name: 'Ovo',
+      description: 'Ovo',
+      calories: 65.70,
+      carbohydrate: 0.27,
+      proteins: 5.99,
+      fat: 4.28,
+      quantity: 1,
+      measure: 'un'
+    },
+    {
+      name: 'Cerveja Brahma Duplo Malte 269',
+      description: 'Cerveja Brahma Duplo Malte 269',
+      calories: 117,
+      carbohydrate: 9.69,
+      proteins: 1.26,
+      fat: 0,
+      quantity: 1,
+      measure: 'un'
+    },
+    {
+      name: 'Cerveja Brahma Duplo Malte 269',
+      description: 'Cerveja Brahma Duplo Malte 269',
+      calories: 117,
+      carbohydrate: 9.69,
+      proteins: 1.26,
+      fat: 0,
+      quantity: 1,
+      measure: 'un'
+    },
+    {
       name: 'Personalizado',
       description: 'Personalizado',
       calories: 0,
