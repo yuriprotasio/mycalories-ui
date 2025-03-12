@@ -414,6 +414,16 @@ const foods = () => {
       measure: 'un'
     },
     {
+      name: 'Sassami Sadia',
+      description: 'Sassami Sadia',
+      calories: 106,
+      carbohydrate: 0,
+      proteins: 23,
+      fat: 1.5,
+      quantity: 100,
+      measure: 'g'
+    },
+    {
       name: 'Personalizado',
       description: 'Personalizado',
       calories: 0,
