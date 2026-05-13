@@ -424,6 +424,16 @@ const foods = () => {
       measure: 'g'
     },
     {
+      name: 'Whey protein fuse creme de avelã 1.5 scoop',
+      description: 'Whey protein fuse creme de avelã 1.5 scoop',
+      calories: 147,
+      carbohydrate: 8.5,
+      proteins: 26,
+      fat: 1,
+      quantity: 40,
+      measure: 'g'
+    },
+    {
       name: 'Personalizado',
       description: 'Personalizado',
       calories: 0,
